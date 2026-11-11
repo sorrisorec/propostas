@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposta Dia de Prova</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Arena à noite: verde-pista profundo, marfim, latão de estribo, vermelho REC */
+  --bg:#0E1712;
+  --surface:#15211A;
+  --line:#2A3A30;
+  --ink:#EFE9DC;
+  --muted:#A9B2A6;
+  --brass:#CDA85E;
+  --rec:#E5483B;
+  --display:"Bodoni Moda", "Didot", "Times New Roman", serif;
+  --body:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  color-scheme:dark;
+  /* layout: coluna única editorial, cards de formato em grid que vira 1 coluna no celular */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* topo */
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:58px;gap:16px}
+.brand{font-family:var(--display);font-size:22px;font-weight:600;letter-spacing:.01em;text-decoration:none}
+.brand b{font-family:var(--mono);font-weight:500;font-size:14px;color:var(--rec);letter-spacing:.08em;margin-left:2px;vertical-align:2px}
+.rec{font-family:var(--mono);font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;font-variant-numeric:tabular-nums}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--rec);box-shadow:0 0 10px var(--rec);animation:blink 1.2s steps(2,start) infinite}
+@keyframes blink{to{visibility:hidden}}
+
+/* hero */
+.hero{padding:72px 0 56px;position:relative}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);display:flex;flex-wrap:wrap;gap:6px 14px}
+.eyebrow span+span::before{content:"/";margin-right:14px;color:var(--line)}
+h1{font-family:var(--display);font-weight:500;font-size:clamp(46px,9vw,108px);line-height:.98;letter-spacing:-.02em;margin:22px 0 28px;text-wrap:balance}
+h1 em{font-style:italic;color:var(--brass);position:relative;display:inline-block}
+h1 em::after{content:"";position:absolute;left:2%;right:2%;bottom:.06em;height:3px;background:var(--brass);transform-origin:left;animation:draw 1s cubic-bezier(.7,0,.2,1) 1.5s both}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.split .ch{display:inline-block;animation:rise .9s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i) * 28ms + 150ms)}
+.split .w{display:inline-block;white-space:nowrap;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+@keyframes rise{from{transform:translateY(105%) rotate(4deg);opacity:0}to{transform:none;opacity:1}}
+.lede{font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:34em;animation:fade 1s ease 1.1s both}
+.lede strong{color:var(--ink);font-weight:600}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* faixa */
+.band{border-block:1px solid var(--line);overflow:hidden;padding:14px 0;background:var(--surface)}
+.track{display:flex;gap:40px;width:max-content;animation:slide 32s linear infinite;font-family:var(--display);font-style:italic;font-size:26px;color:var(--ink);white-space:nowrap}
+.track i{font-style:normal;font-family:var(--mono);font-size:13px;color:var(--brass);align-self:center}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* seções */
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+.label{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.label::after{content:"";height:1px;flex:0 0 48px;background:var(--brass);opacity:.6}
+h2{font-family:var(--display);font-weight:500;font-size:clamp(32px,5vw,52px);line-height:1.05;letter-spacing:-.01em;margin-bottom:22px;text-wrap:balance;max-width:16em}
+h2 em{color:var(--brass)}
+.prose{max-width:38em;color:var(--muted);display:grid;gap:16px}
+.prose strong{color:var(--ink);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:13px 22px;border:1px solid var(--brass);color:var(--brass);border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;transition:background .25s,color .25s}
+.btn:hover{background:var(--brass);color:var(--bg)}
+
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.quote{border-left:2px solid var(--brass);padding:6px 0 6px 22px;font-family:var(--display);font-style:italic;font-size:clamp(22px,2.6vw,28px);line-height:1.3}
+
+/* formatos */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.plan{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:28px 24px 26px;display:flex;flex-direction:column;gap:18px;position:relative;transition:transform .35s,border-color .35s}
+.plan:hover{transform:translateY(-4px);border-color:var(--brass)}
+.plan.feat{border-color:var(--brass);box-shadow:0 0 0 1px var(--brass) inset}
+.tag{position:absolute;top:-12px;left:24px;background:var(--brass);color:var(--bg);font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:3px;font-weight:500}
+.num{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.plan h3{font-family:var(--display);font-weight:600;font-size:28px;line-height:1.1}
+.for{font-size:14.5px;color:var(--muted);margin-top:-8px}
+.price{font-family:var(--display);font-size:46px;font-weight:500;line-height:1;font-variant-numeric:tabular-nums;display:flex;align-items:baseline;gap:6px}
+.price small{font-family:var(--body);font-size:14px;color:var(--muted);font-weight:500}
+.dur{font-family:var(--mono);font-size:13px;color:var(--brass);display:flex;align-items:center;gap:8px;font-variant-numeric:tabular-nums}
+.dur::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--rec)}
+.plan ul{list-style:none;display:grid;gap:10px;font-size:15.5px;border-top:1px solid var(--line);padding-top:18px}
+.plan li{position:relative;padding-left:22px}
+.plan li::before{content:"";position:absolute;left:0;top:.8em;width:10px;height:1px;background:var(--brass)}
+.plan li strong{color:var(--ink);font-weight:700}
+.min{font-size:14px;color:var(--ink);background:color-mix(in srgb,var(--brass) 14%,transparent);border:1px solid color-mix(in srgb,var(--brass) 45%,transparent);border-radius:4px;padding:10px 12px;line-height:1.45}
+.min b{color:var(--brass)}
+.wa{background:var(--brass);color:var(--bg);font-size:16px;padding:15px 26px}
+.wa:hover{background:var(--ink);color:var(--bg)}
+.wa svg{width:20px;height:20px}
+.wa[hidden]{display:none}
+
+/* passos */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border-top:1px solid var(--line)}
+.step{padding:22px 20px 0 0;display:grid;gap:8px;align-content:start}
+.step .t{font-family:var(--mono);font-size:12.5px;color:var(--brass);letter-spacing:.08em;text-transform:uppercase}
+.step h4{font-family:var(--display);font-size:22px;font-weight:600;line-height:1.15}
+.step p{font-size:15px;color:var(--muted)}
+
+.cond{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:36px}
+.cond div{border:1px solid var(--line);border-radius:6px;padding:20px 22px}
+.cond h4{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);margin-bottom:8px;font-weight:500}
+.cond p{font-size:15.5px;color:var(--muted)}
+
+.cta{padding:96px 0 80px;border-bottom:0}
+.cta h2{font-size:clamp(40px,7vw,80px);max-width:12em}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media (max-width:860px){
+  .plans{grid-template-columns:1fr;gap:26px}
+  .two{grid-template-columns:1fr;gap:32px}
+  .steps{grid-template-columns:1fr 1fr;row-gap:28px}
+  .cond{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  body{font-size:16px}
+  .hero{padding:52px 0 44px}
+  section{padding:56px 0}
+  .steps{grid-template-columns:1fr}
+  .rec .lbl{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="https://sorrisorec.com">Sorriso<b>REC</b></a>
+    <div class="rec" aria-label="Gravando"><span class="dot"></span><span class="lbl">REC</span><span id="tc">00:00:00:00</span></div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <p class="eyebrow"><span>Proposta para Anna Magalhães</span><span>Dia de prova</span><span>Sábado, 14 de novembro</span></p>
+    <h1 class="split">Do aquecimento ao <em>último salto.</em></h1>
+    <p class="lede">Uma proposta para transformar o sábado em vídeo: <strong>para você</strong> e para quem compete ao seu lado.</p>
+  </div>
+
+  <div class="band" aria-hidden="true">
+    <div class="track">
+      <span>Pista de aquecimento</span><i>●</i><span>Reconhecimento do percurso</span><i>●</i><span>Entrada na pista</span><i>●</i><span>Zero falta</span><i>●</i><span>Bastidores da cocheira</span><i>●</i><span>Premiação</span><i>●</i>
+      <span>Pista de aquecimento</span><i>●</i><span>Reconhecimento do percurso</span><i>●</i><span>Entrada na pista</span><i>●</i><span>Zero falta</span><i>●</i><span>Bastidores da cocheira</span><i>●</i><span>Premiação</span><i>●</i>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap two">
+      <div>
+        <p class="label">Quem filma</p>
+        <h2>Prazer, eu sou o <em>Sorriso.</em></h2>
+        <div class="prose">
+          <p>Gabriel Lucas no RG, Sorriso no trabalho. À frente da SorrisoREC, faço captação e edição de vídeo para marcas e pessoas, e quero levar esse olhar para a rotina de competição.</p>
+          <p>No Instagram você encontra alguns trabalhos recentes e o tipo de linguagem que eu gosto de construir: imagem cuidada, ritmo de redes e foco na pessoa.</p>
+        </div>
+        <a class="btn" href="https://www.instagram.com/sorriso.rec/">Ver trabalhos no @sorriso.rec <span aria-hidden="true">→</span></a>
+      </div>
+      <div>
+        <p class="label">Sobre o sábado</p>
+        <p class="quote">Um dia de prova pede o mesmo preparo de qualquer captação profissional.</p>
+        <div class="prose" style="margin-top:20px">
+          <p>São horas de pista, equipamento, deslocamento e edição. Por isso, em vez de um teste sem compromisso, montei <strong>um formato de entrada com valor reduzido</strong>, que já entrega material de verdade para as suas redes.</p>
+          <p>E se a gente seguir junto nas competições de 2027, <strong>esse valor volta para você como crédito.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="label">Formatos</p>
+      <h2>Três jeitos de levar o sábado <em>para casa.</em></h2>
+
+      <div class="plans">
+        <article class="plan feat">
+          <span class="tag">Indicado para o teste</span>
+          <span class="num">01</span>
+          <h3>Dia de Prova</h3>
+          <p class="for">Para você</p>
+          <div class="price"><small>R$</small><span data-count="1300">1.300</span></div>
+          <span class="dur">Vídeo de 30 a 45 s</span>
+          <ul>
+            <li>Sua rotina no dia: aquecimento, entrada na pista e bastidores</li>
+            <li>Edição vertical 9:16, pronta para Reels e Stories</li>
+            <li><strong>100% do valor vira crédito</strong> no pacote de 2027</li>
+          </ul>
+        </article>
+
+        <article class="plan">
+          <span class="num">02</span>
+          <h3>Pílulas de Pista</h3>
+          <p class="for">Para você e mais 4 competidores</p>
+          <div class="price"><small>R$</small><span data-count="500">500</span><small>por competidor</small></div>
+          <span class="dur">Vídeos de 20 s, um para cada</span>
+          <p class="min">Mínimo de <b>4 competidores</b>. Fechando o grupo, <b>o seu vídeo sai de graça.</b></p>
+          <ul>
+            <li>Você junta 4 amigos que vão competir e eu faço <strong>5 vídeos</strong>: o seu e o de cada um</li>
+            <li>Captação do percurso de cada competidor</li>
+            <li>Você só indica: eu combino tudo direto com cada um</li>
+            <li>Mais gente no grupo? R$ 500 por competidor extra</li>
+          </ul>
+        </article>
+
+        <article class="plan">
+          <span class="num">03</span>
+          <h3>Cobertura Completa</h3>
+          <p class="for">Para você, o dia inteiro</p>
+          <div class="price"><small>R$</small><span data-count="2400">2.400</span></div>
+          <span class="dur">Vídeo de 1 min a 1 min 30 s</span>
+          <ul>
+            <li>Seu dia de prova contado do começo ao fim</li>
+            <li>Narrativa completa: preparação, prova e resultado</li>
+            <li>Edição vertical 9:16, pronta para as redes</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="label">Pílulas de Pista</p>
+      <h2>Você não precisa <em>intermediar nada.</em></h2>
+      <div class="prose">
+        <p>Você comentou que os fotógrafos do evento não dão conta de todo mundo. É aí que as pílulas entram. Junta pelo menos 4 amigos que vão competir no sábado, me passa o contato deles e eu falo direto com cada um: valor, horário da prova e pagamento ficam comigo.</p>
+        <p>Com o grupo fechado, <strong>o seu vídeo sai por minha conta.</strong></p>
+      </div>
+
+      <div class="steps">
+        <div class="step"><span class="t">Até sexta</span><h4>Escolha do formato</h4><p>Você escolhe o formato. Nas Pílulas, me passa o contato de pelo menos 4 competidores.</p></div>
+        <div class="step"><span class="t">Até sexta</span><h4>Contato direto</h4><p>Falo com cada competidor e organizo os horários de prova de todo mundo.</p></div>
+        <div class="step"><span class="t">Sábado</span><h4>Dia de prova</h4><p>Captação do aquecimento à premiação, sem atrapalhar a sua concentração.</p></div>
+        <div class="step"><span class="t">Depois</span><h4>Entrega</h4><p>Vídeos editados e prontos para postar na segunda de manhã.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap two">
+      <div>
+        <p class="label">Temporada 2027</p>
+        <h2>Pacotes sob medida, <em>depois do sábado.</em></h2>
+        <div class="prose">
+          <p>Os pacotes para as competições do ano que vem eu monto depois de acompanhar uma prova de perto: a rotina, os horários e o ritmo de cada etapa. Assim a proposta sai do tamanho certo para você.</p>
+          <p>O valor do <strong>Dia de Prova</strong> é abatido integralmente do pacote que você fechar.</p>
+        </div>
+      </div>
+      <div class="cond" style="margin-top:0">
+        <div><h4>Pagamento</h4><p>Via Pix. 50% para reservar a data e 50% na entrega dos vídeos.</p></div>
+        <div><h4>Entrega</h4><p>Em até 2 dias úteis. Prova no sábado, vídeos na segunda de manhã, prontos para postar.</p></div>
+        <div><h4>Acesso à pista</h4><p>Se a organização pedir credencial para filmar, a gente resolve junto antes de sábado.</p></div>
+        <div><h4>Validade</h4><p>Proposta válida até sexta-feira, 13 de novembro de 2026.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <p class="label">Próximo passo</p>
+      <h2 class="split">Nos vemos <em>na pista?</em></h2>
+      <div class="prose"><p>Escolha o seu formato e me chame no WhatsApp para confirmar. Eu cuido do resto.</p></div>
+      <a class="btn wa" id="wa" hidden href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>Confirmar pelo WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>SorrisoREC · Gabriel Lucas (Sorriso)</span><a href="https://www.instagram.com/sorriso.rec/">@sorriso.rec</a></div>
+</footer>
+
+<script>
+(function(){
+  // Divide os títulos em letras para a animação de entrada (o texto já está visível sem JS)
+  var i = 0;
+  document.querySelectorAll('.split').forEach(function(el){
+    i = 0;
+    function walk(node){
+      Array.from(node.childNodes).forEach(function(n){
+        if(n.nodeType === 3){
+          var frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(function(word){
+            if(!word) return;
+            if(/^\s+$/.test(word)){ frag.appendChild(document.createTextNode(' ')); return; }
+            var w = document.createElement('span'); w.className = 'w';
+            Array.from(word).forEach(function(c){
+              var s = document.createElement('span'); s.className = 'ch';
+              s.style.setProperty('--i', i++); s.textContent = c; w.appendChild(s);
+            });
+            frag.appendChild(w);
+          });
+          node.replaceChild(frag, n);
+        } else if(n.nodeType === 1){ walk(n); }
+      });
+    }
+    el.setAttribute('aria-label', el.textContent.trim());
+    walk(el);
+  });
+
+  // Botão do WhatsApp: preencha o número com DDI + DDD, só dígitos (ex.: 5581999999999)
+  var WHATSAPP = "5511976753489";
+  var wa = document.getElementById('wa');
+  if(WHATSAPP){
+    wa.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Oi, Sorriso! Vi a proposta do dia de prova e quero fechar o formato: ");
+    wa.hidden = false;
+  }
+
+  // Timecode de câmera no topo
+  var tc = document.getElementById('tc'), t0 = Date.now();
+  function pad(n){ return String(n).padStart(2,'0'); }
+  setInterval(function(){
+    var ms = Date.now() - t0, s = Math.floor(ms/1000);
+    tc.textContent = pad(Math.floor(s/3600)) + ':' + pad(Math.floor(s/60)%60) + ':' + pad(s%60) + ':' + pad(Math.floor((ms%1000)/1000*30));
+  }, 1000/30);
+
+  // Contagem dos valores (termina no valor real; sem animação se o usuário preferir menos movimento)
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.querySelectorAll('[data-count]').forEach(function(el){
+      var end = +el.dataset.count, start = performance.now(), dur = 1400;
+      function step(now){
+        var p = Math.min(1,(now-start)/dur), e = 1 - Math.pow(1-p,3);
+        el.textContent = Math.round(end*e).toLocaleString('pt-BR');
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+})();
+</script>
+</body>
+</html>
