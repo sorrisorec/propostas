@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposta Nas Nuvens — Festa de fim de ano · Sorriso REC</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Proposta Sorriso REC: cobertura de vídeo e foto da festa de fim de ano da Nas Nuvens.">
+<meta property="og:title" content="Proposta — Festa de fim de ano · Sorriso REC">
+<meta property="og:description" content="Aftermovie, fotos de cobertura e backdrop de uma noite inteira.">
+<meta property="og:image" content="https://sorrisorec.com/assets/set-direcao.webp">
+<link rel="icon" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   SORRISO REC — proposta (mesmo visual do site)
+   Pra trocar conteúdo, procure "EDITAR".
+   ========================================================= */
+:root{
+  --bg:#0b0a09; --ink:#f1ebdf; --cream:#efe8da; --red:#e5402a; --muted:#8a847a; --soft:#d8d1c4;
+  --line:rgba(241,235,223,.14); --pad:clamp(18px,3.2vw,40px);
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:"Archivo",system-ui,sans-serif;font-size:16px;line-height:1.5;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--red);color:var(--ink)}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.d{font-stretch:62%;font-weight:900;text-transform:uppercase;line-height:.86;letter-spacing:-.01em}
+.it{font-style:italic;font-weight:700;font-stretch:62%;text-transform:none;letter-spacing:-.02em}
+.red{color:var(--red)}
+.label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.mono{font-variant-numeric:tabular-nums}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--red);display:inline-block;animation:blink 1s steps(2,start) infinite;flex:none}
+@keyframes blink{to{visibility:hidden}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s ease,transform 1.1s var(--ease)}
+.rv.on{opacity:1;transform:none}
+.sp .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.16em 0 .05em;margin-top:-.16em}
+.sp .ch{display:inline-block;transform:translateY(110%) rotate(8deg);opacity:0;transition:transform 1s var(--ease),opacity .6s}
+.sp.on .ch{transform:none;opacity:1}
+.no-js .rv,.no-js .sp .ch{opacity:1;transform:none}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:14px var(--pad);background:linear-gradient(180deg,rgba(11,10,9,.75),rgba(11,10,9,0))}
+.logo img{height:clamp(28px,3vw,38px);width:auto}
+.logo .fb{font-stretch:62%;font-weight:900;font-size:22px;text-transform:uppercase}
+.hcenter{display:flex;gap:16px;align-items:center}
+.hright{justify-self:end}
+.ul{position:relative}
+.ul::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:currentColor;transform-origin:right;transition:transform .5s var(--ease)}
+.ul:hover::after{transform:scaleX(0)}
+@media(max-width:640px){.hide-m{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding:110px var(--pad) clamp(28px,4vw,48px)}
+.hero .ph{position:absolute;inset:0}
+.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:center 35%;transform:scale(1.12);animation:zoomout 2.4s var(--ease) .1s forwards}
+@keyframes zoomout{to{transform:scale(1)}}
+.hero .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,9,.55) 0%,rgba(11,10,9,.15) 35%,rgba(11,10,9,.55) 62%,rgba(11,10,9,.96) 100%)}
+.hero>*:not(.ph){position:relative;z-index:2}
+.eyebrow{display:flex;flex-wrap:wrap;gap:6px 16px;color:var(--ink);margin-bottom:22px}
+.eyebrow span+span::before{content:"/";margin-right:16px;color:var(--red)}
+.hero h1{font-size:clamp(58px,11.5vw,190px);text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.hero h1 .it{color:var(--red)}
+.hero .bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-top:clamp(22px,3vw,40px);flex-wrap:wrap}
+.hero .lede{max-width:34ch;font-size:clamp(17px,1.6vw,21px);color:var(--soft)}
+.hero .lede strong{color:var(--ink)}
+.hero .tc{color:var(--muted)}
+
+/* red band */
+.band{padding:clamp(20px,3vw,34px) 0;overflow:hidden;background:var(--red);color:var(--bg)}
+.band .row{display:flex;width:max-content;animation:mq 28s linear infinite}
+.band span{font-size:clamp(54px,9vw,140px);padding-right:.3em;white-space:nowrap}
+.band span.o{-webkit-text-stroke:2px var(--bg);color:transparent;font-style:italic}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sections */
+.sec{padding:clamp(80px,11vw,160px) var(--pad)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px 40px;flex-wrap:wrap;margin-bottom:clamp(36px,5vw,70px)}
+.sec-head h2{font-size:clamp(60px,10vw,170px)}
+.sec-head h2 .it{color:var(--red)}
+.sec-head p{max-width:36ch;color:var(--soft);font-size:clamp(16px,1.3vw,18px)}
+.num{display:flex;gap:10px;align-items:center;color:var(--muted);margin-bottom:12px}
+
+/* o dia */
+.day{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,5vw,80px);align-items:start}
+@media(max-width:820px){.day{grid-template-columns:1fr}}
+.day p{font-size:clamp(17px,1.5vw,21px);color:var(--soft);max-width:40ch}
+.day p+p{margin-top:1em}
+.day p strong{color:var(--ink);font-weight:700}
+.facts{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);margin-top:34px}
+.facts div{padding:16px 12px 16px 0;border-bottom:1px solid var(--line)}
+.facts b{display:block;font-stretch:62%;font-weight:900;font-size:clamp(28px,3vw,42px);text-transform:uppercase;line-height:1}
+.facts span{color:var(--muted);font-size:13px}
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pics div{border-radius:8px;overflow:hidden;aspect-ratio:2/3;background:#1a1816}
+.pics div:nth-child(2){margin-top:22%}
+.pics img{width:100%;height:100%;object-fit:cover}
+
+/* entregas */
+.items{list-style:none;border-top:1px solid var(--line)}
+.item{display:grid;grid-template-columns:60px minmax(0,1.3fr) minmax(0,1fr) auto;gap:14px 28px;align-items:start;padding:clamp(22px,2.6vw,34px) 0;border-bottom:1px solid var(--line);transition:background .3s}
+.item:hover{background:rgba(241,235,223,.03)}
+.item .n{color:var(--muted);padding-top:.5em}
+.item h3{font-size:clamp(40px,5.6vw,88px)}
+.item h3 .it{color:var(--red)}
+.item .fmt{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.item .txt{color:var(--soft);font-size:16px;padding-top:.4em}
+.item .txt ul{list-style:none;display:grid;gap:6px;margin-top:10px}
+.item .txt li::before{content:"→ ";color:var(--red)}
+.price{text-align:right;white-space:nowrap}
+.price small{display:block;color:var(--muted);margin-bottom:4px}
+.price b{font-stretch:62%;font-weight:900;font-size:clamp(34px,3.6vw,56px);line-height:1}
+.price b sup{font-size:.42em;vertical-align:.95em;margin-right:4px;font-weight:700}
+.item.bonus{background:rgba(229,64,42,.08);border-radius:8px;border:1px dashed rgba(229,64,42,.55);padding-left:18px;padding-right:18px;margin-top:18px}
+.item.bonus .price b{color:var(--red)}
+@media(max-width:860px){
+  .item{grid-template-columns:40px 1fr;}
+  .item .txt{grid-column:2}
+  .item .price{grid-column:2;text-align:left;display:flex;align-items:baseline;gap:12px}
+  .item .price small{margin:0}
+}
+
+/* investimento (cream) */
+.invest{background:var(--cream);color:var(--bg)}
+.invest .sec-head p{color:#3b372f}
+.invest .num{color:#6b655b}
+.sum{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,80px);align-items:end}
+@media(max-width:820px){.sum{grid-template-columns:1fr}}
+.lines{border-top:1.5px solid rgba(11,10,9,.25)}
+.lines div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid rgba(11,10,9,.15);font-size:clamp(16px,1.4vw,19px)}
+.lines div span:last-child{font-variant-numeric:tabular-nums;font-weight:600}
+.lines .tot{font-weight:700}
+.lines .tot span:last-child{text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:var(--red);opacity:.6}
+.lines .gift span:last-child{color:var(--red)}
+.lines .tot.keep span:last-child{text-decoration:none;opacity:1}
+.big{font-size:clamp(96px,17vw,280px);line-height:.8}
+.big sup{font-size:.28em;vertical-align:1.6em;margin-right:.08em;font-style:normal}
+.pack .label{color:var(--red);display:flex;gap:10px;align-items:center;margin-bottom:14px}
+.pack p{margin-top:18px;max-width:36ch;font-size:clamp(16px,1.4vw,19px);color:#3b372f}
+.pack p strong{color:var(--bg)}
+
+/* cronograma */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.step{padding:24px 20px 0 0;display:grid;gap:10px;align-content:start}
+.step .t{color:var(--red)}
+.step h4{font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:clamp(28px,2.8vw,40px);line-height:.92}
+.step p{color:var(--soft);font-size:15px;max-width:28ch}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr;row-gap:30px}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}}
+
+/* referências */
+.refs{display:flex;gap:clamp(12px,1.6vw,22px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px;margin:0 calc(var(--pad)*-1);padding-left:var(--pad);padding-right:var(--pad)}
+.refs::-webkit-scrollbar{display:none}
+.ref{flex:0 0 auto;width:clamp(290px,40vw,620px);scroll-snap-align:start}
+.ref .media{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#1a1816}
+.ref img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.ref:hover img{transform:scale(1.05)}
+.ref .play{position:absolute;left:14px;bottom:14px;width:52px;height:52px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center}
+.ref .play::before{content:"";border-left:14px solid var(--ink);border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.ref .tagx{position:absolute;left:14px;top:14px;background:var(--red);padding:4px 8px;border-radius:4px;font-size:10px}
+.ref .meta{display:flex;justify-content:space-between;gap:10px;padding-top:10px;font-size:14px}
+.ref .meta b{font-weight:600}
+.ref .meta b::before{content:"→ ";color:var(--red)}
+.ref .meta span{color:var(--muted)}
+.more{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;background:var(--ink);color:var(--bg);font-weight:600;font-size:14px;transition:background .25s,color .25s}
+.btn:hover{background:var(--red);color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+
+/* condições */
+.cond{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cond div{border:1px solid var(--line);border-radius:8px;padding:22px}
+.cond h4{color:var(--red);margin-bottom:10px}
+.cond p{color:var(--soft);font-size:15.5px}
+@media(max-width:900px){.cond{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cond{grid-template-columns:1fr}}
+
+/* contato */
+.contact{background:var(--red);color:var(--bg);padding:clamp(90px,10vw,150px) var(--pad) 0;overflow:hidden}
+.contact h2{font-size:clamp(84px,16vw,270px)}
+.contact h2 .it{color:var(--ink)}
+.contact .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-top:clamp(28px,4vw,50px)}
+.contact p{font-size:clamp(18px,1.6vw,22px);max-width:32ch}
+.contact .btn{background:var(--bg);color:var(--ink);font-size:16px;padding:16px 26px}
+.contact .btn:hover{background:var(--ink);color:var(--bg)}
+.contact .btn svg{width:20px;height:20px}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:40px 0 20px;font-size:13px;font-weight:500;border-top:1.5px solid rgba(11,10,9,.25);margin-top:clamp(60px,8vw,110px)}
+.endword{font-size:20vw;text-align:center;line-height:.78;white-space:nowrap;margin:0 calc(var(--pad)*-1);transform:translateY(30%)}
+.endword .dot{width:.12em;height:.12em;vertical-align:.52em;animation-duration:1.4s;background:var(--ink)}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.sp .ch{opacity:1;transform:none}.hero .ph img{transform:none}}
+</style>
+</head>
+<body class="no-js">
+
+<header>
+  <a href="https://sorrisorec.com" class="logo"><img src="/assets/logo.png" alt="Sorriso REC" onerror="this.outerHTML='<span class=&quot;fb&quot;>Sorriso REC</span>'"></a>
+  <div class="hcenter label"><span class="hide-m">Proposta</span><i class="dot"></i><span id="tc" class="mono">00:00:00:00</span></div>
+  <div class="hright label"><a class="ul" href="#fechar" style="white-space:nowrap">Fechar<span class="hide-m"> proposta</span></a></div>
+</header>
+
+<main>
+<!-- HERO — EDITAR: nome do cliente e data -->
+<section class="hero">
+  <div class="ph"><img src="/assets/set-direcao.webp" alt="Sorriso dirigindo uma cena"></div>
+  <p class="eyebrow label"><span>Proposta para Nas Nuvens</span><span>Festa de fim de ano</span><span>Quinta, 3 de dezembro</span></p>
+  <h1 class="d"><span class="sp" data-sp>Uma noite.</span><br><span class="sp it" data-sp>Pro ano inteiro.</span></h1>
+  <div class="bottom">
+    <p class="lede rv">300 convidados, seis horas na Casa de Francisca e <strong>uma equipe de três</strong> registrando tudo. Festa na quinta, <strong>fotos e aftermovie entregues até domingo</strong>.</p>
+    <span class="tc label mono rv">REC · 20h → 02h · entrega até dom</span>
+  </div>
+</section>
+
+<section class="band" aria-hidden="true">
+  <div class="row d">
+    <span>Aftermovie</span><span class="o">Fotos</span><span>Backdrop</span><span class="o">Reels</span>
+    <span>Aftermovie</span><span class="o">Fotos</span><span>Backdrop</span><span class="o">Reels</span>
+  </div>
+</section>
+
+<!-- A NOITE -->
+<section class="sec">
+  <div class="day">
+    <div>
+      <div class="num label"><i class="dot" style="animation:none"></i> 01 / A noite</div>
+      <div class="sec-head" style="margin-bottom:28px"><h2 class="d"><span class="sp" data-sp>Seis horas,</span><br><span class="sp it" data-sp>três olhares.</span></h2></div>
+      <p class="rv">Eu fico com o vídeo do começo ao fim: a chegada, os shows, a pista e os encontros, tudo dentro da arquitetura do palacete da Casa de Francisca.</p>
+      <p class="rv">Comigo vão <strong>dois fotógrafos</strong>. Um abre a noite no <strong>backdrop</strong>, com luz de estúdio, recebendo cada convidado que chega, e depois vira o segundo olhar da festa. O outro circula livre do começo ao fim pelos shows, pela pista e pelas interações. Assim nenhum momento fica sem registro.</p>
+      <div class="facts rv">
+        <div><b>20h → 02h</b><span>de 3 pra 4 de dezembro</span></div>
+        <div><b>300</b><span>convidados</span></div>
+        <div><b>3 pessoas</b><span>vídeo + 2 fotógrafos</span></div>
+        <div><b>FX30</b><span>câmera cinema + luz própria</span></div>
+      </div>
+    </div>
+    <div class="pics rv">
+      <div><img src="/assets/rig.webp" alt="Câmera de cinema na mão" loading="lazy"></div>
+      <div><img src="/assets/set-monitor.webp" alt="Pessoas olhando o monitor durante uma gravação" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ENTREGAS — EDITAR: itens e valores -->
+<section class="sec" id="entregas" style="padding-top:0">
+  <div class="num label"><i class="dot" style="animation:none"></i> 02 / Entregas</div>
+  <div class="sec-head">
+    <h2 class="d"><span class="sp" data-sp>O que você</span><br><span class="sp it" data-sp>recebe.</span></h2>
+    <p class="rv">Valor por item, pra você ver onde está cada coisa.</p>
+  </div>
+
+  <ul class="items">
+    <li class="item rv">
+      <span class="n label">01</span>
+      <div><h3 class="d">Aftermovie <span class="it">horizontal</span></h3>
+        <div class="fmt"><span class="chip">16:9</span><span class="chip">Até 2 min</span><span class="chip">Pronto no domingo</span></div></div>
+      <div class="txt">O resumo da noite com cara de filme: a chegada, os shows, a pista e os momentos da empresa, montados no ritmo da festa.
+        <ul><li>Montagem, color grading e sound design</li><li>Master em alta pra telão, YouTube e LinkedIn</li></ul></div>
+      <div class="price"><small class="label">Vídeo</small><b><sup>R$</sup>3.400</b></div>
+    </li>
+    <li class="item rv">
+      <span class="n label">02</span>
+      <div><h3 class="d">Fotos <span class="it">da festa</span></h3>
+        <div class="fmt"><span class="chip">Shows e pista</span><span class="chip">+200 fotos tratadas</span></div></div>
+      <div class="txt">Um fotógrafo livre pela festa inteira, das 20h às 2h: shows, pista, interações, discursos e detalhes da decoração.
+        <ul><li>Seleção e tratamento de cor</li><li>Entregues em alta resolução, prontas pra postar</li></ul></div>
+      <div class="price"><small class="label">Cobertura</small><b><sup>R$</sup>1.800</b></div>
+    </li>
+    <li class="item rv">
+      <span class="n label">03</span>
+      <div><h3 class="d">Backdrop <span class="it">+ festa</span></h3>
+        <div class="fmt"><span class="chip">Luz de estúdio</span><span class="chip">Todos os convidados</span></div></div>
+      <div class="txt">Na chegada, um fotógrafo fixo no painel da marca, com luz de estúdio, chamando cada convidado pra foto. Passado o pico de entrada, ele circula como segundo olhar da festa e volta ao painel sempre que formar fila.
+        <ul><li>Retrato de todos que passarem pelo backdrop</li><li>Ângulos e momentos que um fotógrafo só não pega</li><li>Seleção e tratamento de cor</li></ul></div>
+      <div class="price"><small class="label">Backdrop + festa</small><b><sup>R$</sup>1.800</b></div>
+    </li>
+    <li class="item rv">
+      <span class="n label">04</span>
+      <div><h3 class="d">Versão <span class="it">vertical</span></h3>
+        <div class="fmt"><span class="chip">9:16</span><span class="chip">Reels e Stories</span></div></div>
+      <div class="txt">O aftermovie desdobrado pro vertical, com reenquadramento e ritmo próprios pras redes. Não é só um corte do horizontal: é pensado pro formato desde a captação.
+        <ul><li>Feito a partir do horizontal aprovado</li></ul></div>
+      <div class="price"><small class="label">Vertical</small><b><sup>R$</sup>600</b></div>
+    </li>
+  </ul>
+</section>
+
+<!-- INVESTIMENTO — EDITAR: valores -->
+<section class="sec invest" id="investimento">
+  <div class="num label"><i class="dot" style="animation:none"></i> 03 / Investimento</div>
+  <div class="sec-head">
+    <h2 class="d"><span class="sp" data-sp>Fechando</span><br><span class="sp it red" data-sp>a noite toda.</span></h2>
+    <p class="rv">Captação, equipe, equipamento, transporte e pós-produção inclusos. Sem custo escondido.</p>
+  </div>
+  <div class="sum">
+    <div class="lines rv">
+      <div><span>Vídeo · aftermovie horizontal</span><span>R$ 3.400</span></div>
+      <div><span>Vídeo · versão vertical 9:16</span><span>R$ 600</span></div>
+      <div><span>Fotografia · cobertura da festa</span><span>R$ 1.800</span></div>
+      <div><span>Fotografia · backdrop + festa</span><span>R$ 1.800</span></div>
+      <div class="tot keep"><span>Cobertura completa</span><span>R$ 7.600</span></div>
+    </div>
+    <div class="pack rv">
+      <p class="label"><i class="dot"></i> Vídeo + foto</p>
+      <div class="big d"><sup>R$</sup><span data-count="7600">7.600</span></div>
+      <p><strong>Entrega em até 72h:</strong> prévia na sexta, galeria completa no sábado e aftermovie no domingo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CRONOGRAMA — EDITAR: datas -->
+<section class="sec">
+  <div class="num label"><i class="dot" style="animation:none"></i> 04 / Cronograma</div>
+  <div class="sec-head">
+    <h2 class="d"><span class="sp" data-sp>Da festa</span><br><span class="sp it" data-sp>pro feed.</span></h2>
+    <p class="rv">Festa na quinta, <strong style="color:var(--ink)">fotos e aftermovie entregues até domingo</strong>. Pra postar enquanto todo mundo ainda está falando dela.</p>
+  </div>
+  <div class="steps">
+    <div class="step rv"><span class="t label">Qui, 3/12 · 20h</span><h4>Festa</h4><p>Seis horas de vídeo e duas frentes de foto, até as 2h.</p></div>
+    <div class="step rv"><span class="t label">Sex, 4/12</span><h4>Prévia</h4><p>20 fotos tratadas pra postar no dia seguinte.</p></div>
+    <div class="step rv"><span class="t label">Sáb, 5/12</span><h4>Galeria</h4><p>Todas as fotos da festa e do backdrop, tratadas.</p></div>
+    <div class="step rv"><span class="t label">Dom, 6/12</span><h4>Vídeo</h4><p>Aftermovie horizontal pronto. A versão vertical sai logo depois da sua aprovação.</p></div>
+  </div>
+</section>
+
+<!-- REFERÊNCIAS -->
+<section class="sec" style="padding-top:0">
+  <div class="num label"><i class="dot" style="animation:none"></i> 05 / Referências</div>
+  <div class="sec-head">
+    <h2 class="d"><span class="sp" data-sp>Já rolou</span><br><span class="sp it" data-sp>em evento.</span></h2>
+    <p class="rv">Aftermovie e conteúdo vertical de um evento corporativo, no mesmo olhar que vai pra festa.</p>
+  </div>
+  <div class="refs rv">
+    <a class="ref" href="https://sorrisorec.com/videos/asterasys-aftermovie.mp4" target="_blank" rel="noopener">
+      <div class="media"><img src="/assets/asterasys-aftermovie.webp" alt="Aftermovie Conecta — Asterasys" loading="lazy"><span class="tagx label">Aftermovie de evento</span><span class="play"></span></div>
+      <div class="meta"><b>Aftermovie — Conecta</b><span>Asterasys · Entera</span></div>
+    </a>
+    <a class="ref" href="https://sorrisorec.com/videos/asterasys-pilula-1.mp4" target="_blank" rel="noopener">
+      <div class="media"><img src="/assets/asterasys-pilula-1.webp" alt="Pílula de palestra — Asterasys" loading="lazy"><span class="tagx label">Evento · vertical</span><span class="play"></span></div>
+      <div class="meta"><b>Pílula — palestra</b><span>Asterasys</span></div>
+    </a>
+  </div>
+  <div class="more rv">
+    <a class="btn ghost" href="https://sorrisorec.com/#clipes">Ver portfólio completo →</a>
+    <a class="btn ghost" href="https://www.instagram.com/sorriso.rec/">@sorriso.rec ↗</a>
+  </div>
+</section>
+
+<!-- CONDIÇÕES — EDITAR -->
+<section class="sec" style="padding-top:0">
+  <div class="num label"><i class="dot" style="animation:none"></i> 06 / Condições</div>
+  <div class="cond">
+    <div class="rv"><h4 class="label">Pagamento</h4><p>Via Pix. 50% pra reservar a equipe (até 25/11) e 50% na entrega.</p></div>
+    <div class="rv"><h4 class="label">Ajustes</h4><p>Até 3 rodadas de ajuste, feitas primeiro no aftermovie horizontal. Com ele aprovado, desdobro a versão vertical em até 1 dia.</p></div>
+    <div class="rv"><h4 class="label">Alinhamento</h4><p>Antes da festa a gente fecha o roteiro da noite: horário dos shows, momentos-chave e onde fica o backdrop.</p></div>
+    <div class="rv"><h4 class="label">Equipamento</h4><p>Câmera Sony FX30, kit de luz e iluminação de estúdio do backdrop inclusos.</p></div>
+    <div class="rv"><h4 class="label">Horário e transporte</h4><p>6h de cobertura, das 20h às 2h. Transporte da equipe incluso, inclusive a volta de madrugada. Hora extra à parte.</p></div>
+    <div class="rv"><h4 class="label">Validade</h4><p>Proposta válida até 25 de novembro de 2026.</p></div>
+  </div>
+</section>
+</main>
+
+<!-- CONTATO -->
+<section class="contact" id="fechar">
+  <h2 class="d"><span class="sp" data-sp>Bora</span><br><span class="sp it" data-sp>pra festa?</span></h2>
+  <div class="wrap">
+    <p>Me chama no WhatsApp pra confirmar e garantir a equipe no dia 3.</p>
+    <a class="btn" id="wa" href="https://wa.me/5511976753489"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>Confirmar pelo WhatsApp</a>
+  </div>
+  <footer><span>Sorriso REC · Gabriel Lucas (Sorriso)</span><a href="https://www.instagram.com/sorriso.rec/" class="ul">@sorriso.rec</a><a href="https://sorrisorec.com" class="ul">sorrisorec.com</a></footer>
+  <div class="endword d" aria-hidden="true">Sorriso<i class="dot"></i>Rec</div>
+</section>
+
+<script>
+(function(){
+  document.body.classList.remove('no-js');
+
+  // WhatsApp com mensagem pronta
+  var wa = document.getElementById('wa');
+  wa.href = "https://wa.me/5511976753489?text=" + encodeURIComponent("Oi, Sorriso! Vi a proposta da festa de fim de ano da Nas Nuvens (3/12) e quero fechar.");
+
+  // Títulos letra a letra
+  document.querySelectorAll('[data-sp]').forEach(function(el){
+    var txt = el.textContent; el.setAttribute('aria-label', txt); el.textContent = '';
+    txt.split(/(\s+)/).forEach(function(word){
+      if(!word) return;
+      if(/^\s+$/.test(word)){ el.appendChild(document.createTextNode(' ')); return; }
+      var w = document.createElement('span'); w.className = 'w'; w.setAttribute('aria-hidden','true');
+      Array.from(word).forEach(function(c,i){
+        var s = document.createElement('span'); s.className = 'ch'; s.textContent = c;
+        s.style.transitionDelay = (i*28) + 'ms'; w.appendChild(s);
+      });
+      el.appendChild(w);
+    });
+  });
+
+  // Revelar ao rolar
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
+  }, {threshold:.15, rootMargin:'0px 0px -5% 0px'});
+  document.querySelectorAll('.rv,[data-sp]').forEach(function(el){ io.observe(el); });
+
+  // Contagem do valor do pacote
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    if(reduce) return;
+    var end = +el.dataset.count, done = false;
+    new IntersectionObserver(function(es,o){
+      if(!es[0].isIntersecting || done) return; done = true; o.disconnect();
+      var t0 = performance.now();
+      (function step(now){
+        var p = Math.min(1,(now-t0)/1400), e = 1-Math.pow(1-p,3);
+        el.textContent = Math.round(end*e).toLocaleString('pt-BR');
+        if(p<1) requestAnimationFrame(step);
+      })(t0);
+    },{threshold:.4}).observe(el);
+  });
+
+  // Timecode de câmera
+  var tc = document.getElementById('tc'), t0 = Date.now();
+  function pad(n){ return String(n).padStart(2,'0'); }
+  setInterval(function(){
+    var ms = Date.now()-t0, s = Math.floor(ms/1000);
+    tc.textContent = pad(Math.floor(s/3600))+':'+pad(Math.floor(s/60)%60)+':'+pad(s%60)+':'+pad(Math.floor((ms%1000)/1000*24));
+  }, 1000/24);
+})();
+</script>
+</body>
+</html>
