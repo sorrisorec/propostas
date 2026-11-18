@@ -60,7 +60,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template
 /* hero */
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding:110px var(--pad) clamp(28px,4vw,48px)}
 .hero .ph{position:absolute;inset:0}
-.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:center 35%;transform:scale(1.12);animation:zoomout 2.4s var(--ease) .1s forwards}
+.hero .ph img,.hero .ph video{width:100%;height:100%;object-fit:cover;object-position:center 35%;transform:scale(1.12);animation:zoomout 2.4s var(--ease) .1s forwards}
 @keyframes zoomout{to{transform:scale(1)}}
 .hero .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,9,.55) 0%,rgba(11,10,9,.15) 35%,rgba(11,10,9,.55) 62%,rgba(11,10,9,.96) 100%)}
 .hero>*:not(.ph){position:relative;z-index:2}
@@ -101,7 +101,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template
 .pics{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .pics div{border-radius:8px;overflow:hidden;aspect-ratio:2/3;background:#1a1816}
 .pics div:nth-child(2){margin-top:22%}
-.pics img{width:100%;height:100%;object-fit:cover}
+.pics img,.pics video{width:100%;height:100%;object-fit:cover;display:block}
 
 /* entregas */
 .items{list-style:none;border-top:1px solid var(--line)}
@@ -197,7 +197,7 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
 .endword{font-size:20vw;text-align:center;line-height:.78;white-space:nowrap;margin:0 calc(var(--pad)*-1);transform:translateY(30%)}
 .endword .dot{width:.12em;height:.12em;vertical-align:.52em;animation-duration:1.4s;background:var(--ink)}
 
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.sp .ch{opacity:1;transform:none}.hero .ph img{transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.sp .ch{opacity:1;transform:none}.hero .ph img,.hero .ph video{transform:none}}
 </style>
 </head>
 <body class="no-js">
@@ -211,7 +211,7 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
 <main>
 <!-- HERO — EDITAR: nome do cliente e data -->
 <section class="hero">
-  <div class="ph"><img src="/assets/set-direcao.webp" alt="Sorriso dirigindo uma cena"></div>
+  <div class="ph"><video src="hero-loop.mp4" poster="hero-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Sorriso cobrindo um evento"></video></div>
   <p class="eyebrow label"><span>Proposta para Nas Nuvens</span><span>Festa de fim de ano</span><span>Quinta, 3 de dezembro</span></p>
   <h1 class="d"><span class="sp" data-sp>Uma noite.</span><br><span class="sp it" data-sp>Pro ano inteiro.</span></h1>
   <div class="bottom">
@@ -244,7 +244,7 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
     </div>
     <div class="pics rv">
       <div><img src="/assets/rig.webp" alt="Câmera de cinema na mão" loading="lazy"></div>
-      <div><img src="/assets/set-monitor.webp" alt="Pessoas olhando o monitor durante uma gravação" loading="lazy"></div>
+      <div><video src="cobrindo-loop.mp4" poster="cobrindo-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Sorriso de headset com a câmera, plateia ao fundo"></video></div>
     </div>
   </div>
 </section>
