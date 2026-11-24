@@ -6,6 +6,11 @@
 <title>Proposta Nexxt PR — Harper’s Bazaar 15 anos · Sorriso REC</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="description" content="Proposta Sorriso REC: cobertura de vídeo e foto dos convidados da marca na festa de 15 anos da Harper’s Bazaar Brasil, 25 de novembro.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Proposta Nexxt PR — Harper’s Bazaar 15 anos · Sorriso REC">
+<meta property="og:description" content="Vídeo e fotos dos convidados da marca na festa de 15 anos da Harper’s Bazaar Brasil, 25/11.">
+<meta property="og:image" content="https://sorrisorec.com/propostas/nas-nuvens-festa/hero-poster.jpg">
+<meta property="og:image:width" content="1600"><meta property="og:image:height" content="900">
 <link rel="icon" href="/assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,6 +154,15 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
 .endword{font-size:20vw;text-align:center;line-height:.78;white-space:nowrap;margin:0 calc(var(--pad)*-1);transform:translateY(30%)}
 .endword .dot{width:.12em;height:.12em;vertical-align:.52em;animation-duration:1.4s;background:var(--ink)}
 
+/* mídia: vídeos em loop */
+.hero .bgv{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.hero .bgv video{width:100%;height:100%;object-fit:cover;opacity:.5}
+.hero .bgv::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,9,.75) 0%,rgba(11,10,9,.35) 45%,rgba(11,10,9,.9) 100%)}
+.hero>.top,.hero>.bottom,.hero>.word{position:relative;z-index:1}
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(12px,1.6vw,22px);margin-top:clamp(40px,5vw,70px)}
+.duo .media{position:relative;aspect-ratio:4/5;border-radius:8px;overflow:hidden;background:#1a1816}
+.duo .media img,.duo .media video,.ref .media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.duo .media:nth-child(2){margin-top:12%}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.sp .ch{opacity:1;transform:none}}
 </style>
 </head>
@@ -163,6 +177,7 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
 <main>
   <!-- HERO -->
   <section class="hero">
+    <div class="bgv" aria-hidden="true"><video src="/propostas/nas-nuvens-festa/hero-loop.mp4" poster="/propostas/nas-nuvens-festa/hero-poster.jpg" muted loop playsinline autoplay preload="auto"></video></div>
     <div class="top">
       <div>
         <h1 class="d"><span class="sp" data-sp>Oito convidados.</span><br><span class="sp it" data-sp>Um olhar de moda.</span></h1>
@@ -191,6 +206,10 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
         <p>A equipe da revista vai registrar o evento como um todo. O meu trabalho é outro: <b>acompanhar de perto os oito convidados da marca</b> durante as duas horas, com atenção total à presença deles na noite.</p>
         <p>Chegada, look, detalhes, interações e retratos, com <b>imagens elegantes e uma edição dinâmica</b>, no ritmo de um fashion film.</p>
       </div>
+    </div>
+    <div class="duo">
+      <div class="media rv"><img src="/assets/rig.webp" alt="Câmera de cinema na mão"></div>
+      <div class="media rv"><video src="/propostas/nas-nuvens-festa/cobrindo-loop.mp4" muted loop playsinline autoplay preload="metadata"></video></div>
     </div>
   </section>
 
@@ -241,9 +260,9 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
       <div class="copy rv"><p>Alguns trabalhos de fashion film e evento. O portfólio completo está em <a class="ul" href="https://sorrisorec.com/#moda">sorrisorec.com</a> e no <a class="ul" href="https://www.instagram.com/sorriso.rec/">@sorriso.rec</a>.</p></div>
     </div>
     <div class="refs">
-      <a class="ref rv" href="https://sorrisorec.com/#moda"><div class="media"><img src="/assets/roma-dc.webp" alt="Romã — fashion film, director's cut"><span class="tag label"><i class="dot"></i> Fashion film</span></div><div class="meta"><b>Director's cut</b><span>Romã</span></div></a>
-      <a class="ref rv" href="https://sorrisorec.com/#moda"><div class="media"><img src="/assets/underrider-07.webp" alt="Ride or Die — Under Rider"><span class="tag label"><i class="dot"></i> Moda</span></div><div class="meta"><b>Ride or Die</b><span>Under Rider</span></div></a>
-      <a class="ref rv" href="https://sorrisorec.com/#eventos"><div class="media"><img src="/assets/asterasys-aftermovie.webp" alt="Aftermovie Asterasys"><span class="tag label"><i class="dot"></i> Evento</span></div><div class="meta"><b>Aftermovie</b><span>Asterasys · Entera</span></div></a>
+      <a class="ref rv" href="https://sorrisorec.com/#moda"><div class="media"><img src="/assets/roma-dc.webp" alt="Romã — fashion film, director's cut"><video src="/videos/roma-dc-loop.mp4" muted loop playsinline autoplay preload="metadata"></video><span class="tag label"><i class="dot"></i> Fashion film</span></div><div class="meta"><b>Director's cut</b><span>Romã</span></div></a>
+      <a class="ref rv" href="https://sorrisorec.com/#moda"><div class="media"><img src="/assets/underrider-07.webp" alt="Ride or Die — Under Rider"><video src="/videos/underrider-07-loop.mp4" muted loop playsinline autoplay preload="metadata"></video><span class="tag label"><i class="dot"></i> Moda</span></div><div class="meta"><b>Ride or Die</b><span>Under Rider</span></div></a>
+      <a class="ref rv" href="https://sorrisorec.com/#eventos"><div class="media"><img src="/assets/asterasys-aftermovie.webp" alt="Aftermovie Asterasys"><video src="/videos/asterasys-aftermovie-loop.mp4" muted loop playsinline autoplay preload="metadata"></video><span class="tag label"><i class="dot"></i> Evento</span></div><div class="meta"><b>Aftermovie</b><span>Asterasys · Entera</span></div></a>
     </div>
   </section>
 
